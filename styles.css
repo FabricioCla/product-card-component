@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Montserat", sans-serif;
+  background-color: var(--cream);
+  color: var(--dark-grayish-blue);
+  height: 100vh;display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  width: 340px;
+  margin: 10px auto;
+}
+
+.product-card {
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.product-card__img {
+  height: 240px;
+  border-radius: 10px 10px 0 0;
+  background-image: url("/images/image-product-mobile.jpg");
+  background-size: cover;
+}
+
+.product-card__info {
+  padding: 20px;
+}
+
+.product-card__preview {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.product-card__title {
+  font-family: "Fraunces", sans-serif;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: var(--very-dark-blue);
+}
+
+.product-card__description {
+  line-height: 1.5em;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.product-card__prices {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.product-card__price {
+  font-size: 32px;
+  font-family: "Fraunces", sans-serif;
+  color: var(--dark-cyan);
+}
+
+.product-card__discount {
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.product-card__button {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  display: block;
+  text-align: center;
+  padding: 15px;
+  border-radius: 7px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.product-card__icon {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 50px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1200px) {
+    .main-content {
+        width: 600px;
+        margin: 100px auto;
+      }
+
+    .product-card {
+        display: flex;
+    }
+    .product-card__img {
+        background-image: url("images/image-product-desktop.jpg");
+        width: 160%;
+        height: auto;
+        border-radius: 10px 0 0 10px;
+    }
+}
